@@ -1,5 +1,4 @@
-﻿using Flyer.Bot;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -15,22 +14,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Flyer.Core.Firebase;
+
 namespace Flyer.UI
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginView : Window
     {
-        private FlyerBot courier;
-
-        public MainWindow()
+        public LoginView()
         {
             InitializeComponent();
-
-            courier = new FlyerBot();
-            Debug.WriteLine("Info: Requested Bot to login (async)");
-            Task.Run(courier.Login);
+            DataContext = new ViewModels.LoginViewModel();
         }
     }
 }

@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyerUI", "FlyerUI\FlyerUI.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlyerCore", "FlyerCore\FlyerCore.csproj", "{36740742-4792-42A8-B2F7-C15DB7955D1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyerBot", "FlyerBot\FlyerBot.csproj", "{D0AEB0D8-830F-4F00-85E1-9F7AF8CEB9C3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{36740742-4792-42A8-B2F7-C15DB7955D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36740742-4792-42A8-B2F7-C15DB7955D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36740742-4792-42A8-B2F7-C15DB7955D1B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0AEB0D8-830F-4F00-85E1-9F7AF8CEB9C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0AEB0D8-830F-4F00-85E1-9F7AF8CEB9C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0AEB0D8-830F-4F00-85E1-9F7AF8CEB9C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0AEB0D8-830F-4F00-85E1-9F7AF8CEB9C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
