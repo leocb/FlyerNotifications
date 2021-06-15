@@ -1,0 +1,367 @@
+﻿<Window x:Class="Flyer.UI.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Flyer.UI.Views"
+        mc:Ignorable="d"
+        Title="Flyer Notification" Height="450" Width="900">
+    <Grid Background="{StaticResource Background}" UseLayoutRounding="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="3" Grid.RowSpan="2" Width="150" Background="{StaticResource Background}" Panel.ZIndex="10">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="0" Opacity="0.3" Color="Black"/>
+            </Grid.Effect>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+                <StackPanel Background="{StaticResource Background}">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,5,5,0">
+                        <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                        <Border Width="32" Height="32" CornerRadius="5" Background="{StaticResource BackgroundDark}"/>
+                    </StackPanel>
+                    <TextBlock FontSize="9" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10,2,10,5">
+                        <Hyperlink Command="{Binding ForgotPasswordCmd}" TextDecorations="None" Foreground="{StaticResource Primary}">
+                            Edit Profile
+                        </Hyperlink>
+                        •
+                        <Hyperlink Command="{Binding ForgotPasswordCmd}" TextDecorations="None" Foreground="{StaticResource Primary}">
+                            Log out
+                        </Hyperlink>
+                    </TextBlock>
+                    <Rectangle Fill="{StaticResource Details}" Height="1" HorizontalAlignment="Stretch" Margin="10,0"/>
+                </StackPanel>
+
+                <ScrollViewer Margin="0,5" Grid.Row="1" VerticalScrollBarVisibility="Visible">
+                    <StackPanel>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                        <Button HorizontalAlignment="Stretch" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Right">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,0">
+                                <Label Style="{StaticResource UserName}" Content="UserName" Margin="0,0,5,0"/>
+                                <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </ScrollViewer>
+        </Grid>
+
+        <DockPanel Grid.RowSpan="2" Background="{StaticResource BackgroundDark}" Panel.ZIndex="20">
+            <DockPanel.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="0" Opacity="0.3" Color="Black"/>
+            </DockPanel.Effect>
+            <StackPanel Margin="0" >
+                <ToggleButton Padding="5" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch">
+                    <Border Width="32" Height="32" CornerRadius="5" Background="{StaticResource Primary}">
+                        <Viewbox StretchDirection="Both" Stretch="Uniform">
+                            <ContentControl Content="V" Style="{StaticResource VenueIcon}"/>
+                        </Viewbox>
+                    </Border>
+                </ToggleButton>
+                <ToggleButton Padding="5" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch">
+                    <Border Width="32" Height="32" CornerRadius="5" Background="{StaticResource Primary}">
+                        <Viewbox StretchDirection="Both" Stretch="Uniform">
+                            <ContentControl Content="WWW" Style="{StaticResource VenueIcon}"/>
+                        </Viewbox>
+                    </Border>
+                </ToggleButton>
+                <ToggleButton Padding="5" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch">
+                    <Border Width="32" Height="32" CornerRadius="5" Background="{StaticResource Primary}">
+                        <Path Width="16" Height="16" Fill="{StaticResource ForegroundOnPrimary}" Stretch="Uniform" Data="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/>
+                    </Border>
+                </ToggleButton>
+            </StackPanel>
+        </DockPanel>
+
+        <DockPanel Grid.Column="1" Grid.RowSpan="2" Background="{StaticResource BackgroundDarker}" Panel.ZIndex="10">
+            <DockPanel.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="0" Opacity="0.3" Color="Black"/>
+            </DockPanel.Effect>
+
+            <StackPanel Width="200">
+                <Grid Background="{StaticResource BackgroundDarker}" MinHeight="40">
+                    <TextBlock Text="Venue Title Goes Here" Margin="10, 10, 26, 10" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="{StaticResource ForegroundOnDark}" Style="{StaticResource VenueTitle}"/>
+                    <Button Width="26" Height="26" Padding="5" Background="{StaticResource BackgroundDarker}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,7" BorderBrush="{x:Null}">
+                        <Path Fill="{StaticResource Primary}" Stretch="Uniform" Data="M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z"/>
+                    </Button>
+                </Grid>
+                
+                <ToggleButton Padding="3" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Border Width="24" Height="24" CornerRadius="5" Background="{StaticResource Primary}"/>
+                        <TextBlock Text="Space name goes here" Margin="5,0" Style="{StaticResource SpaceTitle}"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Padding="3" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Border Width="24" Height="24" CornerRadius="5" Background="{StaticResource Primary}"/>
+                        <TextBlock Text="Space name goes here" Margin="5,0" Style="{StaticResource SpaceTitle}"/>
+                    </StackPanel>
+                </ToggleButton>
+                <ToggleButton Padding="3" Background="Transparent" BorderBrush="{x:Null}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal">
+                        <Border Width="24" Height="24" CornerRadius="5" Background="{StaticResource BackgroundDark}">
+                            <Path Width="12" Height="12" Fill="{StaticResource Primary}" Stretch="Uniform" Data="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/>
+                        </Border>
+                        <TextBlock Text="Add new space" Margin="5,0" Style="{StaticResource SpaceTitle}"/>
+                    </StackPanel>
+                </ToggleButton>
+            </StackPanel>
+        </DockPanel>
+
+        <Grid Grid.Column="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer>
+                <StackPanel>
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                        <Label Grid.Column="1" Content="Leonardo Bottaro" Style="{StaticResource UserName}"/>
+                        <Label Grid.Column="1" HorizontalAlignment="Right" Content="31/05/2021 - 17:32" Style="{StaticResource ChatMeta}"/>
+                        <TextBlock
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Style="{StaticResource ChatContent}"
+                            TextWrapping="Wrap"
+                            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                            />
+                    </Grid>
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                        <ContentControl Grid.Column="1" Content="Leonardo Bottaro" Style="{StaticResource UserName}"/>
+                        <ContentControl Grid.Column="1" HorizontalAlignment="Right" Content="31/05/2021 - 17:32" Style="{StaticResource ChatMeta}"/>
+                        <TextBlock
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Style="{StaticResource ChatContent}"
+                            TextWrapping="Wrap"
+                            Text="Message goes here, this one could span multiple lines, so be careful! Message goes here, this one could span multiple lines, so be careful! Message goes here, this one could span multiple lines, so be careful! Message goes here, this one could span multiple lines, so be careful! "
+                            />
+                    </Grid>
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                        <ContentControl Grid.Column="1" Content="Leonardo Bottaro" Style="{StaticResource UserName}"/>
+                        <ContentControl Grid.Column="1" HorizontalAlignment="Right" Content="31/05/2021 - 17:32" Style="{StaticResource ChatMeta}"/>
+                        <TextBlock
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Style="{StaticResource ChatContent}"
+                            TextWrapping="Wrap"
+                            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            />
+                    </Grid>
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Border Width="18" Height="18" CornerRadius="2" Background="{StaticResource BackgroundDark}"/>
+                        <ContentControl Grid.Column="1" Content="Leonardo Bottaro" Style="{StaticResource UserName}"/>
+                        <ContentControl Grid.Column="1" HorizontalAlignment="Right" Content="31/05/2021 - 17:32" Style="{StaticResource ChatMeta}"/>
+                        <TextBlock
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Style="{StaticResource ChatContent}"
+                            TextWrapping="Wrap"
+                            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            />
+                    </Grid>
+
+                    
+                </StackPanel>
+            </ScrollViewer>
+
+            <Grid Grid.Row="1" Background="{StaticResource Background}" MinHeight="54" >
+                <Grid.Effect>
+                    <DropShadowEffect BlurRadius="10" ShadowDepth="0" Opacity="0.3" Color="Black"/>
+                </Grid.Effect>
+
+                <Grid Margin="10,5,10,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel VerticalAlignment="Center">
+                        <WrapPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource NewMessageField}" Margin="0" Text="Nome"/>
+                                <TextBox Height="20" Width="150" Margin="5,3,10,3" Background="{StaticResource Background}" HorizontalAlignment="Left"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource NewMessageField}" Margin="0" Text="Idade"/>
+                                <TextBox Height="20" Width="50" Margin="5,3,10,3" Background="{StaticResource Background}" HorizontalAlignment="Left"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource NewMessageField}" Margin="0" Text="Código"/>
+                                <TextBox Height="20" Width="50" Margin="5,3,10,3" Background="{StaticResource Background}" HorizontalAlignment="Left"/>
+                            </StackPanel>
+                        </WrapPanel>
+
+                        <TextBlock Margin="0,3,0,0" Style="{StaticResource NewMessagePreview}" TextWrapping="Wrap" Text="Preencha os campos para enviar uma mensagem"/>
+                    </StackPanel>
+                    
+                    <Button Grid.Column="1" Margin="10,0,0,0" Background="Transparent" BorderBrush="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <Border Width="32" Height="32" CornerRadius="5" Background="{StaticResource Primary}">
+                            <Path Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,2,0" Fill="{StaticResource ForegroundOnPrimary}" Stretch="Uniform" Data="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/>
+                        </Border>
+                    </Button>
+                </Grid>
+            </Grid>
+            
+        </Grid>
+    </Grid>
+</Window>

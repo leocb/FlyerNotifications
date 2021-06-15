@@ -19,4 +19,11 @@
     <ProjectReference Include="..\FlyerCore\FlyerCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Resources\Colors - Copy.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>

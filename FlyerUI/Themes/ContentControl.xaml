@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Colors.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="ContentControlBase" TargetType="ContentControl">
+        <Setter Property="FontFamily" Value="Noto sans"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="{StaticResource Foreground}"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        
+        <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled"/>
+        <Setter Property="TextOptions.TextFormattingMode" Value="Ideal"/>
+        <Setter Property="TextOptions.TextHintingMode" Value="Auto"/>
+        <Setter Property="TextOptions.TextRenderingMode" Value="Auto"/>
+    </Style>
+
+    <Style x:Key="VenueIcon" TargetType="ContentControl" BasedOn="{StaticResource ContentControlBase}">
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundOnPrimary}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Padding" Value="0"/>
+    </Style>
+
+    <Style x:Key="UserName" TargetType="ContentControl" BasedOn="{StaticResource ContentControlBase}">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Margin" Value="5,0"/>
+        <Setter Property="Padding" Value="0"/>
+    </Style>
+    
+
+    <Style x:Key="ChatMeta" TargetType="ContentControl" BasedOn="{StaticResource ContentControlBase}">
+        <Setter Property="FontSize" Value="9"/>
+        <Setter Property="Margin" Value="5,0"/>
+        <Setter Property="Padding" Value="0"/>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="PrussianBlueColor">#1e3448</Color>
+    <Color x:Key="RichBlackFogra29Color">#121f2b</Color>
+    <Color x:Key="ViridianGreenColor">#2f9c95</Color>
+    <Color x:Key="LightSeaGreenColor">#17c3b2</Color>
+    <Color x:Key="ParadisePinkColor">#e54f6d</Color>
+    <Color x:Key="White90">#E4FFFFFF</Color>
+    <Color x:Key="White20">#3EFFFFFF</Color>
+
+    <SolidColorBrush x:Key="Primary" Color="{StaticResource LightSeaGreenColor}"/>
+
+    <SolidColorBrush x:Key="WhiteOverlay" Color="{StaticResource White20}"/>
+
+    <SolidColorBrush x:Key="Foreground" Color="{StaticResource RichBlackFogra29Color}"/>
+    <SolidColorBrush x:Key="ForegroundOnPrimary" Color="{StaticResource White90}"/>
+    <SolidColorBrush x:Key="ForegroundOnDark" Color="{StaticResource White90}"/>
+
+    <SolidColorBrush x:Key="Details" Color="{StaticResource RichBlackFogra29Color}"/>
+
+    <SolidColorBrush x:Key="Background" Color="White"/>
+    <SolidColorBrush x:Key="BackgroundSecondary" Color="{StaticResource ViridianGreenColor}"/>
+    <SolidColorBrush x:Key="BackgroundDark" Color="{StaticResource PrussianBlueColor}"/>
+    <SolidColorBrush x:Key="BackgroundDarker" Color="{StaticResource RichBlackFogra29Color}"/>
+
+
+</ResourceDictionary>

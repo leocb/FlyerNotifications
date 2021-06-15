@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="GunMetalFlatColor">#2b303a</Color>
+    <Color x:Key="GunMetalOverlayColor">#7f000512</Color>
+    <Color x:Key="GunMetalColor">#D4000512</Color>
+    <Color x:Key="ViridianGreenColor">#129490</Color>
+    <Color x:Key="AzureX11FlatColor">#e2f2f2</Color>
+    <Color x:Key="AzureX11ForLightColor">#1E129490</Color>
+    <Color x:Key="AzureX11ForDarkColor">#EDF0FFFF</Color>
+    <Color x:Key="White80">#D4FFFFFF</Color>
+    <Color x:Key="White20">#3EFFFFFF</Color>
+
+    <SolidColorBrush x:Key="GunMetalFlat" Color="{StaticResource GunMetalFlatColor}"/>
+    <SolidColorBrush x:Key="GunMetal" Color="{StaticResource GunMetalColor}"/>
+    <SolidColorBrush x:Key="ViridianGreen" Color="{StaticResource ViridianGreenColor}"/>
+    <SolidColorBrush x:Key="AzureX11" Color="{StaticResource AzureX11FlatColor}"/>
+    <SolidColorBrush x:Key="AzureX11ForLight" Color="{StaticResource AzureX11ForLightColor}"/>
+    <SolidColorBrush x:Key="AzureX11ForDark" Color="{StaticResource AzureX11ForDarkColor}"/>
+
+    <SolidColorBrush x:Key="Primary" Color="{StaticResource ViridianGreenColor}"/>
+
+    <SolidColorBrush x:Key="WhiteOverlay" Color="{StaticResource White20}"/>
+    
+    <SolidColorBrush x:Key="Foreground" Color="{StaticResource GunMetalColor}"/>
+    <SolidColorBrush x:Key="ForegroundOnPrimary" Color="{StaticResource White80}"/>
+    <SolidColorBrush x:Key="ForegroundOnDark" Color="{StaticResource White80}"/>
+
+    <SolidColorBrush x:Key="Details" Color="{StaticResource GunMetalOverlayColor}"/>
+
+    <SolidColorBrush x:Key="Background" Color="White"/>
+    <SolidColorBrush x:Key="BackgroundSecondary" Color="{StaticResource AzureX11FlatColor}"/>
+    <SolidColorBrush x:Key="BackgroundDark" Color="{StaticResource GunMetalFlatColor}"/>
+
+
+</ResourceDictionary>
