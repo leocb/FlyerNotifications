@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Flyer.Core.Firebase;
 
 namespace Flyer.UI.ViewModels
 {
@@ -31,25 +32,26 @@ namespace Flyer.UI.ViewModels
         public ICommand ForgotPasswordCmd { get; private set; }
         public ICommand CreateCmd { get; private set; }
 
-        // TODO: Check Fields are filled
-        // TODO: Return Login Error Messages
-        // TODO: Confirm User an reset password email was sent
-        // TODO: Make these trully Async operations
-        // TODO: Sweet animations
+#warning TODO: Check Fields are filled
+#warning TODO: Return Login Error Messages
+#warning TODO: Confirm User an reset password email was sent
+#warning TODO: Make these trully Async operations
+#warning TODO: Sweet animations
 
         private async void LoginMethod()
         {
-            await Core.Firebase.User.SignIn(LoginEmail, LoginPassword);
+            await User.SignIn(LoginEmail, LoginPassword);
+            await Venue.GetAllVenues();
         }
 
         private async void ForgotPasswordMethod()
         {
-            await Core.Firebase.User.RequestForgotPassword(LoginEmail);
+            await User.RequestForgotPassword(LoginEmail);
         }
 
         private async void CreateMethod()
         {
-            await Core.Firebase.User.SignUp(CreateUserName, CreateEmail, CreatePassword);
+            await User.SignUp(CreateUserName, CreateEmail, CreatePassword);
         }
     }
 }
