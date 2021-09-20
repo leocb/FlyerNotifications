@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Flyer.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BackgroundColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">200, 6, 14, 34</Value>
+    </Setting>
+    <Setting Name="ForegroundColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="FontFamily" Type="System.Windows.Media.FontFamily" Scope="User">
+      <Value Profile="(Default)">Arial</Value>
+    </Setting>
+    <Setting Name="FontWeight" Type="System.Windows.FontWeight" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="FontStyle" Type="System.Windows.FontStyle" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="AllwaysVisible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DisplayMonitor" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DisplayPosition" Type="Flyer.UI.Utils.DisplayPosition" Scope="User">
+      <Value Profile="(Default)">Top</Value>
+    </Setting>
+    <Setting Name="DisplaySizePercent" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="DisplayTextAnim" Type="Flyer.UI.Utils.DisplayTextAnimation" Scope="User">
+      <Value Profile="(Default)">Slide</Value>
+    </Setting>
+    <Setting Name="DisplayTextAnimSpeed" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="DisplayShowAnim" Type="Flyer.UI.Utils.DisplayShowHideAnimation" Scope="User">
+      <Value Profile="(Default)">Fade</Value>
+    </Setting>
+    <Setting Name="DisplayHideAnim" Type="Flyer.UI.Utils.DisplayShowHideAnimation" Scope="User">
+      <Value Profile="(Default)">Fade</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

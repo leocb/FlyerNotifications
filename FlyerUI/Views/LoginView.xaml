@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Flyer.UI"
         xmlns:vm="clr-namespace:Flyer.UI.ViewModels"
         mc:Ignorable="d"
-        Title="Flyer Notifications Access" Height="453" Width="800" ResizeMode="NoResize"
+        Title="Flyer Notifications Display Server" Height="453" Width="800" ResizeMode="NoResize"
         d:DataContext="{d:DesignInstance Type=vm:LoginViewModel, IsDesignTimeCreatable=True}">
     <Grid>
         <Grid.RowDefinitions>
