@@ -11,97 +11,98 @@ using Flyer.Core.Logging;
 
 namespace Flyer.Core.Firebase
 {
-    public class User
+    public static class User
     {
         // TODO: User Status change events and requests completion
 
         public static async Task SignUp(string publicName, string email, string password)
         {
-            Log.Info($"Signing Up with {email} / {publicName} ...");
-            Session.AuthInfo = await Session.AuthProvider.CreateUserWithEmailAndPasswordAsync(email, password, publicName, false);
-            Log.Info("User Signed Up");
+            Log.Trace($"Signing Up with {email} / {publicName} ...");
+            FirebaseSession.AuthInfo = await FirebaseSession.AuthProvider.CreateUserWithEmailAndPasswordAsync(email, password, publicName, false);
+            await RequestVerifyEmail();
+            Log.Trace("User Signed Up");
         }
 
         public static async Task SignIn(string email, string password)
         {
-            Log.Info($"Signing In with {email} ...");
-            Session.AuthInfo = await Session.AuthProvider.SignInWithEmailAndPasswordAsync(email, password);
-            Log.Info("User Signed In");
+            Log.Trace($"Signing In with {email} ...");
+            FirebaseSession.AuthInfo = await FirebaseSession.AuthProvider.SignInWithEmailAndPasswordAsync(email, password);
+            Log.Trace($"User Signed In ({FirebaseSession.AuthInfo.User.LocalId})");
         }
 
         public static void SignOut()
         {
-            Log.Info($"Signing Out ...");
-            Session.ClearAll();
-            Log.Info($"User Signed Out");
+            Log.Trace($"Signing Out ...");
+            FirebaseSession.ClearAll();
+            Log.Trace($"User Signed Out");
         }
 
         public static async Task RequestForgotPassword(string email)
         {
-            Log.Info($"Requesting password reset for {email} ...");
-            await Session.AuthProvider.SendPasswordResetEmailAsync(email);
-            Log.Info($"Password reset email sent");
+            Log.Trace($"Requesting password reset for {email} ...");
+            await FirebaseSession.AuthProvider.SendPasswordResetEmailAsync(email);
+            Log.Trace($"Password reset email sent");
         }
 
-        public static bool IsEmailVerified => Session.AuthInfo.User.IsEmailVerified;
+        public static async Task RefreshUserData()
+        {
+            Log.Trace("Refreshing user details ...");
+            FirebaseSession.CheckSignedIn();
+            await FirebaseSession.AuthInfo.RefreshUserDetails();
+            Log.Trace("User details updated");
+        }
+
+        public static bool IsEmailVerified
+        {
+            get
+            {
+                FirebaseSession.CheckSignedIn();
+                return FirebaseSession.AuthInfo.User.IsEmailVerified;
+            }
+        }
 
         public static async Task RequestVerifyEmail()
         {
-            Log.Info($"Requesting email verification ...");
-            if (!Session.IsLoggedIn) throw new InvalidOperationException("Login is required for this action");
-            await Session.AuthProvider.SendEmailVerificationAsync(Session.AuthInfo.FirebaseToken);
-            Log.Info($"Verification email sent");
+            Log.Trace($"Requesting email verification ...");
+            FirebaseSession.CheckSignedIn();
+            await FirebaseSession.AuthProvider.SendEmailVerificationAsync(FirebaseSession.AuthInfo.FirebaseToken);
+            Log.Trace($"Verification email sent");
         }
 
         public static async Task UpdateUserEmail(string currentPassword, string newEmail)
         {
-            Log.Info($"Updating user email to {newEmail} ...");
+            Log.Trace($"Updating user email to {newEmail} ...");
+            FirebaseSession.CheckSignedIn();
             if (currentPassword == "") return;
-            if (!Session.IsLoggedIn) throw new InvalidOperationException("Login is required for this action");
-            await Session.AuthProvider.ChangeUserEmail(Session.AuthInfo.FirebaseToken, newEmail);
-            Log.Info($"User email updated");
+            await FirebaseSession.AuthProvider.ChangeUserEmail(FirebaseSession.AuthInfo.FirebaseToken, newEmail);
+            await RequestVerifyEmail();
+            Log.Trace($"User email updated");
         }
         public static async Task UpdateUserPassword(string oldPassword, string newPassword)
         {
-            Log.Info($"Updating user password ...");
-            if (!Session.IsLoggedIn) throw new InvalidOperationException("Login is required for this action");
-            // TODO: Verify if old password is correct
-            if (oldPassword == newPassword) return;
-            await Session.AuthProvider.ChangeUserPassword(Session.AuthInfo.FirebaseToken, newPassword);
-            Log.Info($"User password updated");
+            Log.Trace($"Updating user password ...");
+            FirebaseSession.CheckSignedIn();
+#warning TODO: Verify if old password is correct
+            await FirebaseSession.AuthProvider.ChangeUserPassword(FirebaseSession.AuthInfo.FirebaseToken, newPassword);
+            Log.Trace($"User password updated");
         }
 
         public static async Task UpdateUserName(string newName)
         {
-            Log.Info("Updating UserName ...");
-            if (!Session.IsLoggedIn) throw new InvalidOperationException("Login is required for this action");
-            await Session.AuthProvider.UpdateProfileAsync(Session.AuthInfo.FirebaseToken, newName, null);
-            Log.Info("Username updated");
+            Log.Trace("Updating UserName ...");
+            FirebaseSession.CheckSignedIn();
+            await FirebaseSession.AuthProvider.UpdateProfileAsync(FirebaseSession.AuthInfo.FirebaseToken, newName, null);
+            Log.Trace("Username updated");
         }
 
         public static async Task UpdateUserImage()
         {
-            Log.Info("Updating user image ...");
-            if (!Session.IsLoggedIn) throw new InvalidOperationException("Login is required for this action");
-            // TODO: upload new image and update image url
+            Log.Trace("Updating user image ...");
+            FirebaseSession.CheckSignedIn();
+#warning TODO: upload new image and update image url
             string newImageUrl = "";
-            await Session.AuthProvider.UpdateProfileAsync(Session.AuthInfo.FirebaseToken, null, newImageUrl);
-            Log.Info("User image updated");
+            await FirebaseSession.AuthProvider.UpdateProfileAsync(FirebaseSession.AuthInfo.FirebaseToken, null, newImageUrl);
+            Log.Trace("User image updated");
         }
-
-
-
-        //var venue = new Models.Venue() { Name = "test Venue" };
-        //var newVenueUID = await firebase
-        //    .Child("Venues")
-        //    .PostAsync(JsonSerializer.Serialize(venue), false);
-
-        //var space = new Models.Space() { Name = "test space2" };
-        //venue.Spaces = new List<Models.Space>() { space };
-
-        //await firebase
-        //    //.Child($"Venues/{newVenueUID.Key}")
-        //    .Child($"Venues/-MaQa1ClgTF4z-u1SjWq")
-        //    .PatchAsync(JsonSerializer.Serialize(venue));
     }
 }
