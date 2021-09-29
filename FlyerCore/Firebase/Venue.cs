@@ -1,5 +1,6 @@
 ﻿using Flyer.Core.Logging;
-using Flyer.Core.Models;
+using Flyer.Core.Models.Venues;
+using Flyer.Core.Models.Venues.Spaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,40 +31,49 @@ namespace Flyer.Core.Firebase
             {
                 Name = name,
                 Description = "",
-                Icon = "",
-                IsEnabled = true,
+                IconURL = "",
+                BannerURL = "",
                 IsPublic = isPublic,
-                Spaces = new List<Space>()
+                Spaces = new List<VenueSpace>()
                 {
-                    new Space()
+                    new VenueSpace()
                     {
                         Name = "General",
                         Description = "General messages",
-                        Icon = "",
-                        IsEnabled = true,
-                        IsPublic = true,
                         MessageTemplates = new List<MessageTemplate>(),
-                        Messages = new List<Message>()
+                        Messages = new List<SpaceMessage>()
                         {
-                            new Message()
+                            new SpaceMessage()
                             {
                                 Content = "This is the beginning of the General space. Welcome!",
                                 CreatedBy = "System",
                                 CreatedOn = DateTime.Now.ToString(),
-                                TemplateGUID = ""
                             }
                         }
                     }
                 },
-                Members = new List<Member>()
+                Roles = new List<VenueRole>()
                 {
-                    new Member()
+                    new VenueRole()
                     {
-                        UserGUID = FirebaseSession.AuthInfo.User.LocalId,
+                        Name = "Administrator",
+                        Description = "Full venue control, cannot be deleted.",
+                        Priority = 99,
+                        Color = "Red",
                         IsAdmin = true,
-                        AllowedSpaces = new List<string>(){"General"}
+                        Users = new List<string>() { FirebaseSession.AuthInfo.User.LocalId },
+                    },
+                    new VenueRole()
+                    {
+                        Name = "Everyone",
+                        Description = "Most basic role, cannot be deleted.",
+                        Priority = 0,
+                        Color = "DarkBlue",
+                        Users = new List<string>() { FirebaseSession.AuthInfo.User.LocalId },
                     }
-                }
+                },
+                UsersRequestingAccess = new List<string>(),
+                Users = new List<string>() { FirebaseSession.AuthInfo.User.LocalId },
             };
 
             var newVenue = await FirebaseSession.Client.Child("Venues").PostAsync(JsonSerializer.Serialize(venue), false, TimeSpan.FromSeconds(10));
